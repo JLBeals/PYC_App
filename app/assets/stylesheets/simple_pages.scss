@@ -1,36 +1,79 @@
 /*** Navigation ***/
 nav a {
-  color: black;
-  margin: .75rem;
-  font-family: Arial, sans-serif;
+  color: white;
+  text-decoration: none;
+  font-family: Arial light, sans-serif;
+  font-size: 1.5em;
+  margin: 1.5rem;
+}
+
+nav a:hover {
+  color: grey;
+  text-decoration: none;
+  -webkit-transition: color 250ms;
+  background: none;
 }
 
 ul {
   list-style-type: none;
+  margin: 0;
   padding: 0;
-  margin-top: 1rem;
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 100% !important;
+  height: 2.5rem;
+  background: purple;
 }
- li {
-   display: inline;
+li {
+   display: inline-block;
+   float: right;
+   margin: .75rem;
  }
 
 
-
-
 /*** Body ***/
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  h1 {
+    font-size: 3rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
  h1 {
-   font-family: Poppins bold, Arial Semi bold, sans-serif;
-   font-size: 3rem;
-   margin: 3rem 1rem 1rem 1rem;
+   font-family: Poppins, Arial Semi bold, sans-serif;
+   text-align: center;
+   margin-top: 3rem;
+   line-height: normal;
  }
 
  p {
    font-family: Poppins, Arial, sans-serif;
-   font-size: 1.5rem;
-   margin: 1rem;
+   margin: 1.5rem;
+   text-align: center;
+   text-decoration: none;
+   line-height: 2rem;
+ }
+
+ .center {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
  }
 
 footer {
