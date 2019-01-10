@@ -1,14 +1,17 @@
 /*** Navigation ***/
 nav a {
-  color: white;
   text-decoration: none;
   font-family: Arial light, sans-serif;
   font-size: 1.5em;
   margin: 1.5rem;
+  display: inline-block;
+  float: right;
+  margin: .75rem;
+  color: white;
 }
 
 nav a:hover {
-  color: grey;
+  color: white;
   text-decoration: none;
   -webkit-transition: color 250ms;
   background: none;
@@ -24,12 +27,6 @@ ul {
   height: 2.5rem;
   background: purple;
 }
-li {
-   display: inline-block;
-   float: right;
-   margin: .75rem;
- }
-
 
 /*** Body ***/
 @media screen and (max-width: 600px) {
@@ -66,7 +63,6 @@ body {
    font-family: Poppins, Arial, sans-serif;
    margin: 1.5rem;
    text-align: center;
-   text-decoration: none;
    line-height: 2rem;
  }
 
