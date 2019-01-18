@@ -27,6 +27,17 @@
     <% end %>
   </tbody>
 </table -->
+<div class="carousel-inner">
+  <% @products.each do |product| %>
+  <div class="carousel-item">
+    <%= image_tag(product.image_url) %>
+
+    <div class="carousel-caption d-none d-md-block">
+      <%= product.name %>
+    </div>
+  </div>
+  <% end %>
+</div>
 
 <div class="container-fluid">
   <div class="row">
