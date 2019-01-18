@@ -20,14 +20,15 @@
 
   <body>
 
-    <nav>
+    <nav class="navbar navbar-expand-lg  fixed-top" role="navigation">
+      <%= image_tag("PYC_Swirl_White.png", class: "img-fluid logo") %>
+
       <ul>
         <li><%= link_to "Contact", simple_pages_contact_path %></li>
         <li><%= link_to "About", simple_pages_about_path %></li>
         <li><%= link_to "Home", root_path %></li>
-
-
       </ul>
+
     </nav>
 
     <%= yield %>
