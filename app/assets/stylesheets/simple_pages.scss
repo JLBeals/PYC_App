@@ -41,6 +41,15 @@ ul {
   height: 4.25rem;
 }
 
+/*** Carousel ***/
+
+#carousel {
+  color: black;
+  width: 100%;
+  align-items: center;
+  margin-top: 5rem;
+}
+
 /*** Body ***/
 @media screen and (max-width: 600px) {
   h1 {
@@ -66,10 +75,11 @@ body {
 }
 
  h1 {
-   font-family: Poppins Light, Verdana, Arial, sans-serif;
+   font-family: Niagara Engraved, Verdana, Arial, sans-serif;
    text-align: center;
    margin-top: 5rem;
    line-height: normal;
+   font-size: 5rem;
  }
 
  h2 {
@@ -91,6 +101,7 @@ body {
    margin: 1.5rem;
    text-align: center;
    line-height: 2rem;
+   color: black;
  }
 
  .center {
