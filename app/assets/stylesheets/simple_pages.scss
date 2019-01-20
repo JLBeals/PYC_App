@@ -41,13 +41,37 @@ ul {
   height: 4.25rem;
 }
 
+/*** Body
+
+body {
+  background-size: cover;
+  display: block;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-image: url("PYC_background.jpg");
+  background-repeat: no-repeat;
+} ***/
+
 /*** Carousel ***/
+#carouselExampleIndicators {
+  height: 25rem;
+}
 
 #carousel {
   color: black;
+  display: block;
   width: 100%;
+  height: 100%;
   align-items: center;
-  margin-top: 5rem;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carousel-caption {
+  top: 75%;
+  bottom: auto;
 }
 
 /*** Body ***/
@@ -83,10 +107,11 @@ body {
  }
 
  h2 {
-   font-family: Poppins, Verdana Bold, Arial Semi bold, sans-serif;
+   font-family: Poppins Thin, Verdana, Arial, sans-serif;
+   margin: 2rem;
    text-align: center;
-   line-height: normal;
-   font-size: 1.25rem;
+   line-height: 1.5rem;
+   color: black;
  }
 
  .New_Product {

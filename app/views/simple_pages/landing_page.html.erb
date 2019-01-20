@@ -10,10 +10,10 @@
   <div class="carousel-inner"  id="carousel">
     <% @products.each do |product| %>
     <div class="carousel-item<%= " active" if product == @products.first %>">
-      <%= image_tag(product.image_url) %>
+      <%= image_tag(product.image_url, class: "img-responsive d-block w-20 center") %>
 
       <div class="carousel-caption d-none d-md-block">
-        <p><%= product.name %></p>
+        <h2><%= product.name %></h2>
         <p><%= product.description %></p>
         <p><%= product.price %> Kč </p>
       </div>
