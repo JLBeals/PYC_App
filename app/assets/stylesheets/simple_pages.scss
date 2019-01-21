@@ -98,6 +98,10 @@ body {
   padding: 0;
 }
 
+.container-fluid {
+  margin-top: 5rem;
+}
+
  h1 {
    font-family: Niagara Engraved, Verdana, Arial, sans-serif;
    text-align: center;
@@ -108,9 +112,9 @@ body {
 
  h2 {
    font-family: Poppins Thin, Verdana, Arial, sans-serif;
-   margin: 2rem;
+   margin-top: 5rem;
    text-align: center;
-   line-height: 1.5rem;
+   line-height: auto;
    color: black;
  }
 
@@ -119,6 +123,7 @@ body {
    text-align: center;
    line-height: normal;
    font-size: 1.25rem;
+   margin-bottom: 2rem;
  }
 
  p {
