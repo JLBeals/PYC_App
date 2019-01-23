@@ -6,14 +6,16 @@ nav {
   left: 0;
   z-index: 1;
   background-color: #25ad8c;
+  overflow: hidden;
 }
 
 nav a {
   text-decoration: none;
   font-family: Poppins Light, Arial light, sans-serif;
   font-size: 1.5em;
-  margin: 1.75rem;
-  display: inline-block;
+  margin-top: 1.75rem;
+  padding-right: 1rem;
+  display: block;
   float: right;
   color: white;
   z-index: 1;
@@ -26,9 +28,13 @@ nav a:hover {
   background: none;
 }
 
-.logo {
+nav .icon {
+  display: none;
+}
+
+#logo {
   float: left;
-  margin-left: 1rem;
+  padding-bottom: 1.75rem;
 }
 
 ul {
@@ -40,6 +46,7 @@ ul {
   width: 100% !important;
   height: 4.25rem;
 }
+
 
 /*** Body
 
@@ -74,25 +81,52 @@ body {
   bottom: auto;
 }
 
+/* Typography */
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 544px) {
+    h1 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 1.5rem;
+    }
+  }
+
+   h1 {
+     font-family: Niagara Engraved, Verdana, Arial, sans-serif;
+     text-align: center;
+     margin-top: 5rem;
+     line-height: normal;
+     font-size: 5rem;
+   }
+
+   h2 {
+     font-family: Poppins Thin, Verdana, Arial, sans-serif;
+     margin-top: 5rem;
+     text-align: center;
+     line-height: auto;
+     color: black;
+   }
+
+    p {
+      font-family: Poppins Thin, Verdana, Arial, sans-serif;
+      margin: 1.5rem;
+      text-align: center;
+      line-height: 2rem;
+      color: black;
+    }
+
 /*** Body ***/
-@media screen and (max-width: 600px) {
-  h1 {
-    font-size: 2rem;
-  }
-  p {
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width: 601px) {
-  h1 {
-    font-size: 3rem;
-  }
-  p {
-    font-size: 1.5rem;
-  }
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -102,36 +136,12 @@ body {
   margin-top: 5rem;
 }
 
- h1 {
-   font-family: Niagara Engraved, Verdana, Arial, sans-serif;
-   text-align: center;
-   margin-top: 5rem;
-   line-height: normal;
-   font-size: 5rem;
- }
-
- h2 {
-   font-family: Poppins Thin, Verdana, Arial, sans-serif;
-   margin-top: 5rem;
-   text-align: center;
-   line-height: auto;
-   color: black;
- }
-
  .New_Product {
    font-family: Poppins Thin, Verdana Bold, Arial Semi bold, sans-serif;
    text-align: center;
    line-height: normal;
    font-size: 1.25rem;
    margin-bottom: 2rem;
- }
-
- p {
-   font-family: Poppins Thin, Verdana, Arial, sans-serif;
-   margin: 1.5rem;
-   text-align: center;
-   line-height: 2rem;
-   color: black;
  }
 
  .center {

@@ -21,16 +21,43 @@
 
   <body>
 
-    <nav class="navbar navbar-expand-lg  fixed-top" role="navigation">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" role="navigation"">
+      <a class="navbar-brand" href="#" id="logo">
+        <%= image_tag("PYC_Swirl_White.png", class: "img-fluid logo") %>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"><%= link_to "Home", root_path %></a>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><%= link_to "About", simple_pages_about_path %></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><%= link_to "Contact", simple_pages_contact_path %></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><%= link_to "Products", products_path %><span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- nav class="navbar navbar-expand-lg  fixed-top" role="navigation" id="navbar">
       <%= image_tag("PYC_Swirl_White.png", class: "img-fluid logo") %>
 
       <ul>
+        <li><%= link_to "Products", products_path %></li>
         <li><%= link_to "Contact", simple_pages_contact_path %></li>
         <li><%= link_to "About", simple_pages_about_path %></li>
         <li><%= link_to "Home", root_path %></li>
       </ul>
 
-    </nav>
+    </nav -->
 
     <%= yield %>
 
