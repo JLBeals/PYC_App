@@ -7,7 +7,7 @@
           <%= link_to order.product.name, order %>
         </h2>
         <p><%= order.product.description %></p>
-        <strong><%= order.product.price %> Kč</strong>
+        <strong><%= order.product.price.to_i %> Kč</strong>
       </div><!-- /col -->
     <% end %>
   </div>

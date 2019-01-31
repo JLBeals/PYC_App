@@ -1,32 +1,29 @@
 <div class="container">
-  <h2>Order Information</h2>
-  <strong>Order ID: </strong><%= @order.id %>
-  <strong>Product Name: </strong><%= @order.product.name %>
-  <strong>Product Price: </strong><%= number_to_currency(@order.product.price/100.to_f) %>
-  <strong>Total Price: </strong><%= number_to_currency(@order.total/100.to_f) %>
+  <h2>Product Information</h2>
+
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Name:</strong>
+    <%= @product.name %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= @product.description %>
+  </p>
+
+  <p>
+    <strong>Image url:</strong>
+    <%= @product.image_url %>
+  </p>
+
+  <p>
+    <strong>Price:</strong>
+    <%= @product.price.to_i %> Kč
+  </p>
+
+  <%= link_to 'Edit', edit_product_path(@product) %> |
+  <%= link_to 'Back', products_path %>
+
 </div>
-
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
-
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
-
-<p>
-  <strong>Color:</strong>
-  <%= @product.colour %>
-</p>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>

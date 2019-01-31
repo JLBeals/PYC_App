@@ -2,7 +2,7 @@
   <%= image_tag(product.image_url, class: "img-fluid center") unless product.image_url.nil? %>
   <a href="#"><h2><%= product.name %></h2></a>
   <p><em><%= product.description %></em></p>
-  <p><%= product.price %> Kč </p>
+  <p><%= product.price.to_i %> Kč </p>
   <td><%= link_to 'Show', product %></td>
   <td><%= link_to 'Edit', edit_product_path(product) %></td>
   <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -12,10 +12,10 @@
     <div class="carousel-item<%= " active" if product == @products.first %>">
       <%= image_tag(product.image_url, class: "img-responsive d-block w-20 center") %>
 
-      <div class="carousel-caption d-none d-md-block">
+      <div class="carousel-caption">
         <h2><%= product.name %></h2>
         <p><em><%= product.description %></em></p>
-        <p><%= product.price %> Kč </p>
+        <p><%= product.price.to_i %> Kč </p>
       </div>
     </div>
     <% end %>
