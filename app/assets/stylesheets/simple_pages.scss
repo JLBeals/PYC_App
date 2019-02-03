@@ -1,10 +1,7 @@
 /*** Navigation ***/
 nav {
   width: 100% !important;
-  height: 4.25rem;
-  top: 0;
-  left: 0;
-  z-index: 1;
+  height: auto;
   background-color: #25ad8c;
   overflow: hidden;
 }
@@ -13,12 +10,10 @@ nav a {
   text-decoration: none;
   font-family: Poppins Light, Arial light, sans-serif;
   font-size: 1em;
-  margin-top: 1.5rem;
+  margin-top: .25rem;
   padding-right: 1rem;
   display: block;
-  float: left;
   color: white;
-  z-index: 1;
 }
 
 nav a:hover {
@@ -28,28 +23,11 @@ nav a:hover {
   background: none;
 }
 
-nav .icon {
-  display: none;
-}
+ #logo {
+   position: fixed;
+ }
 
-#logo {
-  float: left;
-  padding-bottom: 1.75rem;
-}
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  position: fixed;
-  top: 0;
-  width: 100% !important;
-  height: 4.25rem;
-}
-
-.search-bar {
-margin-top: 1.25rem;
-}
 
 /*** Body
 

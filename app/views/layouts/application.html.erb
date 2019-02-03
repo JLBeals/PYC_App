@@ -19,38 +19,32 @@
 
   </head>
 
-<div>
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" role="navigation"">
-    <a class="navbar-brand" href="#" id="logo">
-      <%= image_tag("PYC_Swirl_White.png", class: "img-fluid logo") %>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#"><%= link_to "Home", root_path %><span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><%= link_to "About", simple_pages_about_path %></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><%= link_to "Contact", simple_pages_contact_path %></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><%= link_to "Products", products_path %></a>
-        </li>
-        <li class="search-bar"><%= form_with(url: products_path, method: 'get', local: true) do |form| %>
-          <%= form.text_field :q, id: 'q', value: params[:q] %>
-          <%= form.submit 'Search' %>
-          <% end %>
-        </li>
-      </ul>
+  <body>
 
+    <div>
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top" role="navigation"">
+
+          <a class="navbar-brand" id="logo">
+            <%= link_to image_tag("PYC_Swirl_White.png", class:"img-fluid logo"),simple_pages_index_path %>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav mr-auto">
+              <%= link_to "Home", root_path %><span class="sr-only">(current)</span>
+              <%= link_to "About", simple_pages_about_path %>
+              <%= link_to "Contact", simple_pages_contact_path %>
+              <%= link_to "Products", products_path %>
+              <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+              <%= form.text_field :q, id: 'q', value: params[:q] %>
+              <%= form.submit 'Search' %>
+              <% end %>
+            </ul>
+          </div>
+
+      </nav>
     </div>
-   </nav>
-  </div>
 
   <!-- nav class="navbar navbar-expand-lg  fixed-top" role="navigation" id="navbar">
     <%= image_tag("PYC_Swirl_White.png", class: "img-fluid logo") %>
@@ -64,7 +58,7 @@
 
   </nav -->
 
-  <body>
+
 
 
 
