@@ -1,6 +1,6 @@
 <div class="col-md">
   <%= image_tag(product.image_url, class: "img-fluid center") unless product.image_url.nil? %>
-  <a href="#"><h2><%= product.name %></h2></a>
+  <a href="#"><h3><%= product.name %></h3></a>
   <p><em><%= product.description %></em></p>
   <p><%= product.price.to_i %> Kč </p>
   <td><%= link_to 'Show', product %></td>
