@@ -2,10 +2,10 @@
   <div class="row">
     <% @orders.each do |order| %>
       <div class="col-sm">
-        <h2>
+        <h3>
           Order # <%= order.id %>:
           <%= link_to order.product.name, order %>
-        </h2>
+        </h3>
         <p><%= order.product.description %></p>
         <strong><%= order.product.price.to_i %> Kč</strong>
       </div><!-- /col -->

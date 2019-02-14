@@ -1,5 +1,5 @@
 <div class="container">
-  <h2>Product Information</h2>
+  <h3>Product Information</h3>
 
   <p id="notice"><%= notice %></p>
 
@@ -21,6 +21,11 @@
   <p>
     <strong>Price:</strong>
     <%= @product.price.to_i %> Kč
+  </p>
+
+  <p>
+    <strong>Reviews:</strong>
+  <%= @product.highest_rating_comment %>
   </p>
 
   <%= link_to 'Edit', edit_product_path(@product) %> |
