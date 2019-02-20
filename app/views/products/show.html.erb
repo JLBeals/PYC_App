@@ -4,18 +4,18 @@
   <p id="notice"><%= notice %></p>
 
   <p>
+    <%= image_tag(@product.image_url) %>
+  </p>
+
+  <p>
     <strong>Name:</strong>
     <%= @product.name %>
   </p>
 
+
   <p>
     <strong>Description:</strong>
     <%= @product.description %>
-  </p>
-
-  <p>
-    <strong>Image url:</strong>
-    <%= @product.image_url %>
   </p>
 
   <p>
@@ -25,16 +25,17 @@
 
   <p>
     <strong>Reviews:</strong>
-  <%= @product.highest_rating_comment %>
+    <%= render 'comments' %>
   </p>
 
-  <%= render 'new_comment' %>
+  <p>
+    <%= render 'new_comment' %>
+  </p>
+
   <p>
     <strong>Average Rating:</strong>
     <div class="rated" align="center" data-score="<%= @product.average_rating %>"></div>
   </p>
-
-  <%= render 'comments' %>
 
   <%= link_to 'Edit', edit_product_path(@product) %> |
   <%= link_to 'Back', products_path %>
