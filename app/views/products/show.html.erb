@@ -23,6 +23,11 @@
     <%= @product.price.to_i %> Kč
   </p>
 
+    <p>
+      <strong>Average Rating:</strong>
+      <div class="rated" align="center" data-score="<%= @product.average_rating %>"></div>
+    </p>
+
   <p>
     <strong>Reviews:</strong>
     <%= render 'comments' %>
@@ -30,14 +35,11 @@
 
   <p>
     <%= render 'new_comment' %>
+    <%= will_paginate @comments, renderer: BootstrapPagination::Rails %>
   </p>
 
   <p>
-    <strong>Average Rating:</strong>
-    <div class="rated" align="center" data-score="<%= @product.average_rating %>"></div>
+    <%= link_to 'Edit', edit_product_path(@product) %> |
+    <%= link_to 'Back', products_path %>
   </p>
-
-  <%= link_to 'Edit', edit_product_path(@product) %> |
-  <%= link_to 'Back', products_path %>
-
 </div>
