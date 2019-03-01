@@ -3,40 +3,44 @@
 
   <p id="notice"><%= notice %></p>
 
-  <p>
-    <%= image_tag(@product.image_url) %>
-  </p>
+<div class="row">
+  <div class="form-group col-sm-6">
+    <p>
+      <%= image_tag(@product.image_url) %>
+    </p>
 
-  <p>
-    <strong>Name:</strong>
-    <%= @product.name %>
-  </p>
+    <p>
+      <%= @product.name %>
+    </p>
 
+    <p>
+      <%= @product.description %>
+    </p>
 
-  <p>
-    <strong>Description:</strong>
-    <%= @product.description %>
-  </p>
+    <p>
+      <%= @product.price.to_i %> Kč
+    </p>
+  </div>
+</div>
 
-  <p>
-    <strong>Price:</strong>
-    <%= @product.price.to_i %> Kč
-  </p>
-
+<div class="row">
+  <div class="form-group col-sm-6">
     <p>
       <strong>Average Rating:</strong>
       <div class="rated" align="center" data-score="<%= @product.average_rating %>"></div>
     </p>
 
-  <p>
-    <strong>Reviews:</strong>
-    <%= render 'comments' %>
-  </p>
+    <p>
+      <strong>Reviews:</strong>
+      <%= render 'comments' %>
+    </p>
 
-  <p>
-    <%= render 'new_comment' %>
-    <%= will_paginate @comments, renderer: BootstrapPagination::Rails %>
-  </p>
+    <p>
+      <%= render 'new_comment' %>
+      <%= will_paginate @comments, renderer: BootstrapPagination::Rails %>
+    </p>
+  </div>
+</div>
 
   <p>
     <%= link_to 'Edit', edit_product_path(@product) %> |
