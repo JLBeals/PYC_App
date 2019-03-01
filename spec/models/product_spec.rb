@@ -14,5 +14,14 @@ describe Product do
     it "returns the average rating of all comments" do
       expect(product.average_rating).to eq 3
     end
+
+  end
+
+  context "a product with no name is invalid" do
+    let(:product) { Product.new(description: "Cool Pass") }
+
+    it "returns that the product is invalid without a name" do
+      expect(Product.new(description: "Cool Pass")).not_to be_valid
+    end
   end
 end
