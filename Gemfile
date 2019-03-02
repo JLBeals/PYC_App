@@ -32,6 +32,8 @@ gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
 
 gem 'cancancan', '~> 2.0'
 
+gem 'rails-controller-testing'
+
 group :production do
   gem 'pg'
 end
@@ -66,5 +68,3 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
-
-gem 'cancancan', '~> 2.0'
