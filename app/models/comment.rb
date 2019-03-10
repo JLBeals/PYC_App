@@ -1,6 +1,6 @@
 class Comment < ApplicationRecord
-  belongs_to :user
-  belongs_to :product
+  belongs_to :user, optional: true
+  belongs_to :product, optional: true
   validates :body, presence: true
   validates :user, presence: true
   validates :product, presence: true

@@ -34,6 +34,8 @@ gem 'cancancan', '~> 2.0'
 
 gem 'rails-controller-testing'
 
+
+
 group :production do
   gem 'pg'
 end
@@ -49,6 +51,7 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.8'
+  gem "factory_bot_rails", "~> 4.0"
 end
 
 group :development do
