@@ -34,6 +34,8 @@ gem 'cancancan', '~> 2.0'
 
 gem 'rails-controller-testing'
 
+gem 'stripe'
+
 
 
 group :production do

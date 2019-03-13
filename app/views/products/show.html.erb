@@ -20,6 +20,11 @@
     <p>
       <%= @product.price.to_i %> Kč
     </p>
+    <div id="stripe_button">
+      <%= form_with(url: '/payments/create') do |form| %>
+        <%= render partial: "shared/stripe_checkout_button" %>
+      <% end %>
+    </div>
   </div>
 </div>
 
