@@ -36,6 +36,7 @@ gem 'rails-controller-testing'
 
 gem 'stripe'
 
+gem 'brakeman'
 
 
 group :production do
