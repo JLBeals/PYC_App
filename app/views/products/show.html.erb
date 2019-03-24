@@ -44,7 +44,7 @@
 
     <p>
       <%= render 'new_comment' %>
-      <%= will_paginate @comments, renderer: BootstrapPagination::Rails %>
+      <%= will_paginate @comments, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
     </p>
   </div>
 </div>

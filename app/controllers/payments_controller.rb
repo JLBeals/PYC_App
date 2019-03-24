@@ -9,8 +9,8 @@ class PaymentsController < ApplicationController
   # Create the charge on Stripe's servers - this will charge the user's card
   begin
     charge = Stripe::Charge.create(
-      amount: @product.price.to_i, # amount in cents, again
-      currency: "czk",
+      amount: @product.price.to_i*100, # amount in cents, again
+      currency: "CZK",
       source: token,
       description: params[:stripeEmail],
       receipt_email: user.email

@@ -4,6 +4,6 @@
   data-image="<%= @product.image_url %>"
   data-name="<%= @product.name %>"
   data-description="<%= @product.description %>"
-  data-amount="<%= @product.price.to_i %>">
-  data-currency="CZK"
+  data-amount="<%= @product.price.to_i*100 %>"
+  data-currency="CZK">
 </script>
