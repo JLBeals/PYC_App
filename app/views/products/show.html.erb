@@ -1,34 +1,36 @@
 <div class="container">
-  <h3>Product Information</h3>
+  <% cache @product do %>
+    <h3>Product Information</h3>
 
-  <p id="notice"><%= notice %></p>
+    <p id="notice"><%= notice %></p>
 
-<div class="row">
-  <div class="form-group col-sm-6">
-    <p>
-      <%= image_tag(@product.image_url, class: "img-zoom", data_zoom_image: "@product.image_url") %>
-    </p>
+    <div class="row">
+      <div class="form-group col-sm-6">
+        <p>
+          <%= image_tag(@product.image_url, class: "img-zoom", data_zoom_image: "@product.image_url") %>
+        </p>
 
-    <p>
-      <%= @product.name %>
-    </p>
+        <p>
+          <%= @product.name %>
+        </p>
 
-    <p>
-      <%= @product.description %>
-    </p>
+        <p>
+          <%= @product.description %>
+        </p>
 
-    <p>
-      <%= @product.price.to_i %> Kč
-    </p>
-    <div id="stripe_button">
-      <%= form_with(url: '/payments/create') do |form| %>
-        <%= render partial: "shared/stripe_checkout_button" %>
-        <%= hidden_field_tag(:product_id, @product.id) %>
-      <% end %>
+        <p>
+          <%= @product.price.to_i %> Kč
+        </p>
+        <div id="stripe_button">
+          <%= form_with(url: '/payments/create') do |form| %>
+            <%= render partial: "shared/stripe_checkout_button" %>
+            <%= hidden_field_tag(:product_id, @product.id) %>
+          <% end %>
+        </div>
 
+      </div>
     </div>
-  </div>
-</div>
+<% end %>
 
 <div class="row">
   <div class="form-group col-sm-6">

@@ -4,8 +4,8 @@
 
 <div class="container-fluid">
   <div class="row">
-    <% @products.each do |product| %>
-      <%= render product %>
+    <% cache(cache_key_for_products) do %>
+      <%= render @products %>
     <% end %>
   </div>
 <br>
