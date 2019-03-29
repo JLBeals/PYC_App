@@ -40,6 +40,8 @@ gem 'brakeman'
 
 gem 'dalli'
 
+gem 'redis-rails'
+
 
 group :production do
   gem 'pg'
