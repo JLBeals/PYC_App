@@ -4,7 +4,7 @@
 
     <p id="notice"><%= notice %></p>
 
-    <div class="row">
+    <div class="row" data-product-id="<%= @product.id %>">
       <div class="form-group col-sm-6">
         <p>
           <%= image_tag(@product.image_url, class: "img-zoom", data_zoom_image: "@product.image_url") %>
