@@ -18,10 +18,28 @@ describe Product do
 
   end
 
-  context "a product with no name is invalid" do
+  context "a product with no name, no description, or no price is invalid" do
 
     it "returns that the product is invalid without a name" do
       expect(Product.new(description: "Cool Pass")).not_to be_valid
     end
+
+    it "returns that the product is invalid without a description" do
+      expect(Product.new(description: nil)).not_to be_valid
+    end
+
+    it "returns that the product is invalid without a price" do
+      expect(Product.new(price: nil)).not_to be_valid
+    end
+  end
+
+  context "when a user searches for a product with a certain name" do
+
+    let!(:product) { Product.create!(name: "beginner pass") }
+
+    it "returns the product with that name" do
+      expect(Product.search("beginner").first).to eq product
+    end
+
   end
 end
