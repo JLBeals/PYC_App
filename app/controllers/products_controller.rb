@@ -16,7 +16,7 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
     @product = Product.find(params[:id])
-    @comments = @product.comments.includes(:user).order("created_at DESC").paginate(:page => params[:page], per_page: 10)
+    @comments = @product.comments.includes(:user).order("created_at DESC").paginate(:page => params[:page], per_page: 3)
   end
 
   # GET /products/new

@@ -21,4 +21,5 @@ describe Comment do
       expect(Comment.new(product_id: nil)).not_to be_valid
     end
   end
+
 end
