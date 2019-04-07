@@ -14,4 +14,10 @@ class UserMailer < ApplicationMailer
     subject: "Welcome to #{@appname}!")
   end
 
+  def order_confirmation(user)
+  @user = user
+  mail(to: user.email,
+    subject: "Your order has been received")
+  end
+
 end
