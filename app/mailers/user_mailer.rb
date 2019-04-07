@@ -16,6 +16,7 @@ class UserMailer < ApplicationMailer
 
   def order_confirmation(user)
   @user = user
+  @appname = "Prague Yoga Collective"
   mail(to: user.email,
     subject: "Your order has been received")
   end
