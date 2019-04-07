@@ -3,7 +3,9 @@ require 'rails_helper'
 describe ProductsController, type: :controller do
 
   let(:product) { Product.create!(name: "yoga pass") }
-  let(:user) {User.create!(first_name: "Jill", last_name: "Smith", email: "test4@gmail.com", password: "123456") }
+  let(:admin) {User.create!(first_name: "Jill", last_name: "Smith", email: "test4@gmail.com", password: "123456", admin: true) }
+  let(:user) {User.create!(first_name: "Jill", last_name: "Smith", email: "test4@gmail.com", password: "123456", admin: false) }
+
 
   context 'GET #index' do
     it 'renders the index template' do
@@ -30,8 +32,11 @@ describe ProductsController, type: :controller do
   end
 
   context 'GET #edit' do
+    before do
+      sign_in admin
+    end
     it 'renders the edit template' do
-      get :edit, params: { id: user.id }
+      get :edit, params: { id: admin.id }
       expect(response).to be_ok
       expect(response).to render_template('edit')
     end
@@ -39,7 +44,7 @@ describe ProductsController, type: :controller do
 
   context 'POST #create' do
     before do
-      sign_in user
+      sign_in admin
     end
     it 'creates a product' do
       expect(response).to be_successful
@@ -48,7 +53,7 @@ describe ProductsController, type: :controller do
 
   context 'PUT #update' do
     before do
-      sign_in user
+      sign_in admin
     end
     it 'updates a product' do
       expect(response).to be_successful
@@ -57,7 +62,7 @@ describe ProductsController, type: :controller do
 
   context 'DELETE #destroy' do
     before do
-      sign_in user
+      sign_in admin
     end
     it 'deletes a product' do
       expect(response).to be_successful

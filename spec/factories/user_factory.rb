@@ -14,4 +14,5 @@ FactoryBot.define do
     first_name { "Jack" }
     last_name { "Smith" }
   end
+
 end
