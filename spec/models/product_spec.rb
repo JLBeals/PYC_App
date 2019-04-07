@@ -41,6 +41,10 @@ describe Product do
       expect(Product.search("beginner").first).to eq product
     end
 
+    it "does not return the product with that name" do
+      expect(Product.search("advance").first).not_to eq product
+    end
+
   end
 
 end

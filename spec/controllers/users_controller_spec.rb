@@ -32,7 +32,7 @@ describe UsersController, type: :controller do
         sign_in user_2
       end
 
-      it 'redirects to login' do
+      it 'redirects to the home page' do
         get :show, params: { id: user.id }
         expect(response).to redirect_to(root_path)
       end
@@ -45,7 +45,7 @@ describe UsersController, type: :controller do
         sign_in user
       end
 
-      it 'redirects to login' do
+      it 'redirects to the home page' do
         get :show, params: { id: user_2.id }
         expect(response).to redirect_to(root_path)
       end
